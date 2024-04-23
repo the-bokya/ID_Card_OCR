@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://unpkg.com/htmx.org@1.9.11"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <main>
+      <div class="img"></div>
+      <div class="info" hx-get="/infocomp" hx-trigger="every 1s" />
+    </main>
+    <style
+      hx-get="/imgcomp"
+      hx-trigger="every 500ms"
+      hx-swap="outerHTML"
+    ></style>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      main {
+        height: 80vh;
+        width: 60%;
+        display: flex;
+        background-color: rgb(104, 255, 169);
+        border-radius: 20px;
+        align-items: center;
+        flex-flow: column;
+        box-shadow: 10px 10px 30px black;
+        justify-content: space-evenly;
+        border-radius: 2rem;
+        padding: 1.5rem;
+      }
+      .img {
+        width: 32vw;
+        height: 32vw;
+        background-color: black;
+        border-radius: 2rem;
+        border: 0.25rem solid white;
+        box-shadow: 0 0 1rem black;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .info {
+        width: 70%;
+        height: 30%;
+        background-color: rgb(57, 47, 40);
+        border-radius: 1rem;
+        color: rgb(211, 211, 211);
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </body>
+</html>
