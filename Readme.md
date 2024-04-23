@@ -7,4 +7,6 @@ This project uses PyTesseract, Flask and OpenCV to read identity card data. Plea
 1. First install the dependencies: `pip install pytesseract opencv-python flask`
 2. Run `flask run` to start the project. Alternatively, you could just use the standalone command line module without the Flask frontend with `python dip.py`
 
+# Notes
+1. All files other than app.py and dip.py are just for experimentation and are not used in the project.
 
