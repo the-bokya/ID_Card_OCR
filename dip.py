@@ -32,7 +32,8 @@ def cv2_chi_jadu(d=dict(), fields=["Class", "DOB", "Mobile", "Blood group"]):
                 cap.release()
                 break
             if i % 10 == 0:
-                # cv2.imwrite("cap.jpg", frame)
+                if __name__ != "__main__":
+                    cv2.imwrite("cap.jpg", frame)
                 print(d)
                 txt = pytesseract.image_to_string(frame)
                 # cv2.imwrite('cap.jpg', frame)
